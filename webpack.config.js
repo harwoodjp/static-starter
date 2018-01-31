@@ -1,0 +1,38 @@
+const path = require("path")
+
+module.exports = {
+  entry: path.resolve(__dirname, "./static/js/app.js"),
+  output: {
+    path: path.join(__dirname, './static/'),
+    filename: 'app.bundle.js',
+  },
+
+  watch: true,
+
+  module: {
+    loaders: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/, 
+        loader: "babel-loader",
+        query: {
+          presets: ['@babel/preset-env']
+        }
+      },
+    ]
+  },
+
+  module: {
+      rules: [{
+          test: [/\.css$/, /\.scss$/],
+          use: [{
+              loader: "style-loader"
+          }, {
+              loader: "css-loader"
+          }, {
+              loader: "sass-loader",
+          }]
+      }]
+  }
+
+};
