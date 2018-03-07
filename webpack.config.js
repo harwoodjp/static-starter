@@ -1,9 +1,12 @@
 const path = require("path")
 
+console.log(path.join(__dirname, './'))
+
 module.exports = {
   entry: path.resolve(__dirname, "./static/js/app.js"),
   output: {
     path: path.join(__dirname, './static/'),
+    publicPath: "/static",
     filename: 'app.bundle.js',
   },
 
@@ -40,5 +43,4 @@ module.exports = {
     compress: true,
     port: 1776
   }  
-
-};
+}
