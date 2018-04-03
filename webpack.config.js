@@ -1,13 +1,11 @@
 const path = require("path")
 
-console.log(path.join(__dirname, './'))
-
 module.exports = {
-  entry: path.resolve(__dirname, "./static/js/app.js"),
+  entry: path.resolve(__dirname, "./public/js/app.js"),
   output: {
-    path: path.join(__dirname, './static/'),
-    publicPath: "/static",
-    filename: 'app.bundle.js',
+    path: path.join(__dirname, './public/'),
+    publicPath: "/public",
+    filename: 'dist/app.bundle.js',
   },
 
   watch: true,
