@@ -3,5 +3,5 @@
 @import "global.scss";
 
 .container {
-  @include flex(column)
+  @include flex(column);
 }
