@@ -4,4 +4,7 @@
 
 .container {
   @include flex(column);
+  p {
+    color: red;
+  }
 }
